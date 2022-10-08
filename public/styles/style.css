@@ -1,0 +1,26 @@
+/* montserrat, 200, 400 italic, and 700 bold */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap");
+
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    font-style: italic;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* header styles */
+header {
+    color: blue;
+    padding: 0.5rem;
+}
+
+header h1 {
+    margin: 0px;
+    padding: 0px;
+}
