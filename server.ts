@@ -13,6 +13,22 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
+app.get("/about", (req, res) => {
+    res.render("about");
+});
+
+app.get("/portfolio", (req, res) => {
+    res.render("portfolio");
+});
+
+app.get("/contact", (req, res) => {
+    res.render("contact");
+});
+
+app.all("*", (req, res) => {
+    res.status(404).render("404");
+});
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
