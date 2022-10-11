@@ -1,12 +1,5 @@
-/* montserrat, 200, 400 italic, and 700 bold */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap");
-
-* {
-    -webkit-font-smoothing: antialiased;
-}
-
 html {
-    font-style: italic;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 body {
@@ -16,11 +9,18 @@ body {
 
 /* header styles */
 header {
-    color: blue;
+    color: black;
     padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-header h1 {
+.header-logo {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header-nav {
     margin: 0px;
     padding: 0px;
 }
