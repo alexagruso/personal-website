@@ -1,0 +1,73 @@
+:root {
+    --primary: #ffffff;
+    --secondary: #00d1cd;
+    --accent: #00d1cd;
+    --background: #444;
+    --background-dark: #383838;
+}
+
+@font-face {
+    font-family: exo;
+    src: url("../fonts/Exo\ Semi\ Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: raleway;
+    src: url("../fonts/Raleway\ Regular.ttf") format("truetype");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: raleway;
+}
+
+header#main-header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+}
+
+header#main-header .header-logo {
+    margin: 0.5rem;
+}
+
+header#main-header .header-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+
+header#main-header .header-nav a {
+    font-size: 0.75rem;
+    color: var(--primary);
+    text-decoration: none;
+    transition: 200ms;
+    padding: 0.25rem;
+    background-color: var(--background-dark);
+}
+
+header#main-header .header-nav a:hover {
+    font-size: 0.8rem;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    header#main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header#main-header .header-logo {
+        max-width: 50vh;
+    }
+
+    header#main-header .header-nav a {
+    }
+}
