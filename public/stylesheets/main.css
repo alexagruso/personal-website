@@ -3,6 +3,7 @@
     --secondary: #00d1cd;
     --accent: #00d1cd;
     --background: #444444;
+    --background-dark: #333333;
 }
 
 * {
@@ -36,8 +37,8 @@ header#main-header {
 }
 
 header#main-header .header-logo {
-    margin: 0.25rem 1rem;
-    height: 50px;
+    margin-left: 1rem;
+    height: 2rem;
 }
 
 header#main-header .header-nav {
@@ -84,7 +85,9 @@ footer#main-footer {
     }
 
     header#main-header .header-logo {
-        height: 2rem;
+        margin: auto;
+        width: 90vw;
+        object-fit: contain;
     }
 
     header#main-header .header-nav {
@@ -93,7 +96,6 @@ footer#main-footer {
     }
 
     header#main-header .header-nav a {
-        padding: 1rem;
     }
 
     main {
