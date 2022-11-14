@@ -105,6 +105,4 @@ dist
 
 # package-lock
 package-lock.json
-
-# eslint
-.eslintrc.js
+pnpm-lock.yaml

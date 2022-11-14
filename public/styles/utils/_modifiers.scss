@@ -1,0 +1,7 @@
+$padding-base: 0.5rem;
+
+@for $i from 1 through 12 {
+    .padding-#{$i} {
+        padding: $i * $padding-base;
+    }
+}

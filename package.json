@@ -1,35 +1,39 @@
 {
-    "name": "personal-website",
+    "name": "gulp",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "node dist/server.js",
-        "dev": "nodemon server.ts",
-        "build": "tsc -p .",
-        "clean": "rm dist/*.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/alexagruso/personal-website.git"
+        "dev": "gulp dev",
+        "build": "gulp build:sass && gulp build:browserScripts && tsc -p .",
+        "start": "node -r ts-node/register -r tsconfig-paths/register ./dist/server.js",
+        "clean": "rm -rf ./dist/"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/alexagruso/personal-website/issues"
-    },
-    "homepage": "https://github.com/alexagruso/personal-website#readme",
-    "dependencies": {
-        "ejs": "^3.1.8",
-        "express": "^4.18.1"
-    },
     "devDependencies": {
         "@types/express": "^4.17.14",
-        "@typescript-eslint/eslint-plugin": "^5.39.0",
-        "@typescript-eslint/parser": "^5.39.0",
-        "eslint": "^8.24.0",
+        "@types/express-ejs-layouts": "^2.5.0",
+        "@types/node": "^18.11.9",
+        "browserify": "^17.0.0",
+        "gulp": "^4.0.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-nodemon": "^2.5.0",
+        "gulp-sass": "^5.1.0",
+        "gulp-typescript": "6.0.0-alpha.1",
+        "gulp-uglify": "^3.0.2",
+        "nodemon": "^2.0.20",
+        "sass": "^1.56.0",
         "ts-node": "^10.9.1",
-        "typescript": "^4.8.4"
+        "tsconfig-paths": "^4.1.0",
+        "typescript": "^4.8.4",
+        "vinyl-buffer": "^1.0.1",
+        "vinyl-source-stream": "^2.0.0"
+    },
+    "dependencies": {
+        "ejs": "^3.1.8",
+        "express": "^4.18.2",
+        "express-ejs-layouts": "^2.5.1"
     }
 }
