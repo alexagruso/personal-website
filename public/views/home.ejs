@@ -1,3 +1,5 @@
-<div class="container padding-12">
+<% for (let i = 1; i <= 12; i++) { %>
+<div class="container padding-<%= i %> margin-<%= 12 - i %>">
     <h1>Hello</h1>
 </div>
+<% } %>
