@@ -1,0 +1,14 @@
+@use "../utils/_utils-h" as *;
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    height: 1rem;
+}
+
+.bar {
+    width: 1rem;
+    height: 0.5rem;
+    background-color: color-get($color-primary, 50%);
+}

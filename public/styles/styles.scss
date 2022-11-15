@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+// css reset and typography imports
+@use "./base/__base-h" as *;
+
+@use "./utils/_utils-h" as *;
+
+@use "./components/_components-h";
+@use "./layouts/_layouts-h";
+
+body {
+    background-color: $color-black;
+}

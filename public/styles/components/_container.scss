@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    flex-direction: row;
+
+    &.col {
+        flex-direction: column;
+    }
+
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+
+    &.col.reverse {
+        flex-direction: column-reverse;
+    }
+}
