@@ -11,6 +11,7 @@ server.set("views", path.resolve(__dirname, "../public/views/"));
 
 server.use(express.static(path.resolve(__dirname, "../dist/public/styles/")));
 server.use(express.static(path.resolve(__dirname, "../dist/public/scripts/")));
+server.use(express.static(path.resolve(__dirname, "../public/res/")));
 server.use(ejsLayouts);
 
 server.get("/", (req: Request, res: Response) => {

@@ -1,6 +1,14 @@
+@use "../utils/_utils-h" as *;
+
 #main-navbar {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: color-get($color-primary, 50%);
+}
+
+.logo {
 }
 
 .dropdown {
@@ -9,4 +17,5 @@
 
 .menu {
     display: flex;
+    background-color: color-get($color-primary, 50%);
 }

@@ -1,4 +1,15 @@
 @use "../utils/_utils-h" as *;
 
-#main-navbar .menu {
+#main-navbar a {
+    padding: 1rem;
+    background-color: color-get($color-primary, 40%);
+    color: $color-white;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    transition: all 150ms;
+
+    &:hover {
+        background-color: $color-black;
+    }
 }
