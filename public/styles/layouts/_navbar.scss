@@ -5,10 +5,15 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: color-get($color-primary, 50%);
+    background-color: $color-primary;
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    img {
+        max-height: 6rem;
+    }
 }
 
 .dropdown {
@@ -17,5 +22,5 @@
 
 .menu {
     display: flex;
-    background-color: color-get($color-primary, 50%);
+    background-color: $color-primary-accent;
 }

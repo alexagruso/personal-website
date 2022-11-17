@@ -1,26 +1,7 @@
-$primary: (
-    hue: 210,
-    saturation: 43%,
-);
-
-$primary-accent: (
-    hue: 227,
-    saturation: 100%,
-);
-
-$secondary: (
-    hue: 11,
-    saturation: 75%,
-);
-
-$secondary-accent: (
-    hue: 27,
-    saturation: 98%,
-);
+$primary: hsl(242, 100%, 20%);
+$primary-accent: hsl(238, 90%, 34%);
+$secondary: hsl(140, 39%, 56%);
+$secondary-accent: hsl(162, 71%, 76%);
 
 $white: hsl(200, 20%, 80%);
-$black: hsl(200, 20%, 20%);
-
-@function get($color, $lightness) {
-    @return hsl(map-get($color, hue), map-get($color, saturation), $lightness);
-}
+$black: hsl(204, 17%, 11%);
