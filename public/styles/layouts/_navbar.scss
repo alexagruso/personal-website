@@ -1,26 +1,40 @@
-@use "../utils/_utils-h" as *;
+@use "../base/_base-h" as *;
+@use "../utils/_utils" as *;
 
 #main-navbar {
+    background-color: $color-a;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: $color-primary;
-}
 
-.logo {
-    display: flex;
-    align-items: center;
-    img {
-        max-height: 6rem;
+    .menu {
+        display: flex;
+        gap: 1rem;
+        margin-right: 1rem;
+
+        a {
+            padding: 0.75rem 2.5rem;
+            border-radius: 1.5rem;
+            text-decoration: none;
+            color: $color-p;
+            font-size: 1.25rem;
+            transition: 150ms;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+
+            &:hover {
+                color: $color-white;
+                background-color: $color-p;
+            }
+        }
     }
-}
 
-.dropdown {
-    display: none;
-}
+    img {
+        max-width: 100%;
+        margin-top: 0.25rem;
 
-.menu {
-    display: flex;
-    background-color: $color-primary-accent;
+        @include min-query(20rem) {
+            height: 4rem;
+        }
+    }
 }

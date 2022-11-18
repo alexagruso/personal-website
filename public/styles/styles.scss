@@ -3,11 +3,33 @@
 // css reset and typography imports
 @use "./base/__base-h" as *;
 
-@use "./utils/_utils-h" as *;
+@use "./utils/_utils" as *;
 
-@use "./components/_components-h";
-@use "./layouts/_layouts-h";
+@use "./components/_components";
+@use "./layouts/_layouts";
 
 body {
-    background-color: $color-black;
+    background-color: $color-p-dark;
+}
+
+.primary {
+    padding: 2rem;
+    background-color: $color-p;
+    margin: 2rem;
+    border: 0.5rem solid $color-p-light;
+
+    p {
+        color: $color-white;
+    }
+}
+
+.secondary {
+    padding: 2rem;
+    background-color: $color-a;
+    margin: 2rem;
+    border: 0.5rem solid $color-a-light;
+
+    p {
+        color: $color-black;
+    }
 }
