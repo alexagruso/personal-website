@@ -8,6 +8,8 @@
 @use "./components/_components";
 @use "./layouts/_layouts";
 
+@use "./animations/_animations";
+
 body {
     background-color: $color-p-dark;
 }
