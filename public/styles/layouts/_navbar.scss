@@ -2,39 +2,49 @@
 @use "../utils/_utils" as *;
 
 #main-navbar {
-    background-color: $color-a;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: right;
+    background-color: $color-a;
 
-    .menu {
+    a {
         display: flex;
         gap: 1rem;
-        margin-right: 1rem;
+        align-items: center;
+        padding: 1.5rem;
+        transition: 250ms;
 
-        a {
-            padding: 0.75rem 2.5rem;
-            border-radius: 1.5rem;
-            text-decoration: none;
-            color: $color-p;
-            font-size: 1.25rem;
-            transition: 150ms;
-            font-family: "Montserrat", sans-serif;
-            font-weight: 600;
+        &:hover {
+            cursor: pointer;
+            background-color: $color-p-dark;
 
-            &:hover {
+            span {
                 color: $color-white;
-                background-color: $color-p;
+            }
+
+            .arrow {
+                border-top-color: $color-white;
             }
         }
-    }
 
-    img {
-        max-width: 100%;
-        margin-top: 0.25rem;
+        span {
+            color: $color-p-dark;
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 300;
+            font-size: 1.5rem;
+            transition: 250ms;
+        }
 
-        @include min-query(20rem) {
-            height: 4rem;
+        .arrow {
+            width: 1rem;
+            border: 0.5rem solid transparent;
+            border-bottom-width: 0;
+            border-top-color: $color-p-dark;
+            transition: 250ms;
+        }
+
+        &.active .arrow {
+            transform: rotateX(180deg);
         }
     }
 }
