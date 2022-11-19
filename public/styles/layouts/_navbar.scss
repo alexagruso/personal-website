@@ -6,7 +6,7 @@
     justify-content: right;
     background-color: $color-a;
 
-    a {
+    .dropdown {
         display: flex;
         gap: 1rem;
         align-items: center;
@@ -43,8 +43,10 @@
             transition: 250ms;
         }
 
-        &.active .arrow {
-            transform: rotateX(180deg);
+        &.active {
+            .arrow {
+                transform: rotateX(180deg);
+            }
         }
     }
 }
