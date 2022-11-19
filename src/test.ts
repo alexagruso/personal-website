@@ -1,3 +1,3 @@
-const pageTitle = "Hello, World!";
+const pageTitle = "Alexander Agruso";
 
 export { pageTitle };

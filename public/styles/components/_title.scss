@@ -1,0 +1,42 @@
+@use "../utils/_utils" as *;
+
+.title {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 6rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.25rem;
+        color: $color-a;
+
+        opacity: 0;
+        animation: pageTitle 1s ease-out forwards;
+    }
+
+    span {
+        font-size: 2rem;
+        font-family: "Roboto Mono", monospace;
+        font-weight: 300;
+        font-style: italic;
+        letter-spacing: 0.125rem;
+        color: $color-a;
+
+        opacity: 0;
+        animation: pageTitle 1s ease-out 500ms forwards;
+    }
+}
+
+@keyframes pageTitle {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
