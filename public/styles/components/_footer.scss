@@ -16,10 +16,20 @@
     font-family: "Montserrat", sans-serif;
     color: $color-a;
     background-color: $color-p-dark;
+    letter-spacing: 0.05rem;
 
     .smile {
         font-size: 1rem;
+        font-family: "Roboto Mono", sans-serif;
         animation: smileRotate 10s linear infinite;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &::selection {
+            text-decoration: none;
+        }
     }
 
     .copyright {
@@ -45,7 +55,8 @@
             height: 2rem;
         }
 
-        .upwork {
+        .upwork,
+        .linkedin {
             filter: invert(100%);
         }
     }
