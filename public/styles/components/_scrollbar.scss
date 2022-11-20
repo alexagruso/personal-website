@@ -1,0 +1,15 @@
+@use "../utils/_utils" as *;
+
+body::-webkit-scrollbar {
+    width: 0.75rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: $color-p-dark;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $color-a;
+    border: 0.25rem solid $color-p-dark;
+    border-radius: 0.375rem;
+}

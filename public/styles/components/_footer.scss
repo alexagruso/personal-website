@@ -1,0 +1,58 @@
+@use "../utils/_utils" as *;
+
+#main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $color-a;
+    margin-top: 10vh;
+
+    @include max-query(20rem) {
+        flex-direction: column;
+    }
+
+    padding: 1.5rem;
+    width: 100vw;
+    font-family: "Montserrat", sans-serif;
+    color: $color-a;
+    background-color: $color-p-dark;
+
+    .smile {
+        font-size: 1rem;
+        animation: smileRotate 10s linear infinite;
+    }
+
+    .copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .icons {
+        display: flex;
+        gap: 0.75rem;
+
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .upwork {
+            filter: invert(100%);
+        }
+    }
+}
+
+@keyframes smileRotate {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

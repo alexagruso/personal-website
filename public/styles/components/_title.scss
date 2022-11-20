@@ -7,36 +7,45 @@
     justify-content: center;
     align-items: center;
 
+    @include max-query(40rem) {
+        gap: 1rem;
+    }
+
     h1 {
-        font-size: 6rem;
+        margin: 0 5vw;
+        font-size: clamp(2rem, 8vw, 6rem);
+        text-align: center;
         font-family: "Montserrat", sans-serif;
         font-weight: 300;
         letter-spacing: 0.25rem;
         color: $color-a;
 
         opacity: 0;
-        animation: pageTitle 1s ease-out forwards;
+        animation: pageTitle 1s ease-out 0.25ms forwards;
     }
 
     span {
-        font-size: 2rem;
+        margin: 0 5vw;
+        font-size: clamp(0.75rem, 4vw, 2rem);
         font-family: "Roboto Mono", monospace;
         font-weight: 300;
-        font-style: italic;
         letter-spacing: 0.125rem;
         color: $color-a;
 
         opacity: 0;
-        animation: pageTitle 1s ease-out 500ms forwards;
+        animation: pageTitle 0.75s ease-out 0.75s forwards,
+            italicize 0.25s ease-in 1.25s forwards;
     }
 }
 
 @keyframes pageTitle {
-    0% {
-        opacity: 0;
-    }
-
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes italicize {
+    100% {
+        transform: skewX(-10deg);
     }
 }

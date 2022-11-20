@@ -1,0 +1,15 @@
+@use "../utils/_utils" as *;
+
+.body-text p {
+    color: $color-white;
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    line-height: 2rem;
+    text-align: center;
+    max-width: clamp(40vw, 50rem, 90vw);
+    margin: 0 auto;
+
+    @include max-query(40rem) {
+    }
+}

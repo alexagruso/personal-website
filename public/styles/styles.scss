@@ -12,8 +12,8 @@
 
 body {
     background-color: $color-p-dark;
-}
-
-h1 {
-    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
 }
