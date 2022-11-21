@@ -1,3 +1,4 @@
+@use "../animations/_animations" as *;
 @use "../utils/_utils" as *;
 
 .title {
@@ -7,8 +8,18 @@
     justify-content: center;
     align-items: center;
 
-    @include max-query(40rem) {
-        gap: 1rem;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 20rem;
+        height: 20rem;
+        background-image: url("icosahedron.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        filter: invert(30%);
+
+        opacity: 0;
+        animation: reveal 1s linear 1.75s forwards, spin 10s linear 1.75s infinite;
     }
 
     h1 {
@@ -21,7 +32,7 @@
         color: $color-a;
 
         opacity: 0;
-        animation: pageTitle 1s ease-out 0.25ms forwards;
+        animation: reveal 1s ease-out forwards;
     }
 
     span {
@@ -33,19 +44,6 @@
         color: $color-a;
 
         opacity: 0;
-        animation: pageTitle 0.75s ease-out 0.75s forwards,
-            italicize 0.25s ease-in 1.25s forwards;
-    }
-}
-
-@keyframes pageTitle {
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes italicize {
-    100% {
-        transform: skewX(-10deg);
+        animation: reveal 0.75s ease-out 0.75s forwards, italicize 0.25s ease-in 1.25s forwards;
     }
 }

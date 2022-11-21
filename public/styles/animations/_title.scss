@@ -1,0 +1,17 @@
+@keyframes reveal {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes italicize {
+    100% {
+        transform: skewX(-10deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
