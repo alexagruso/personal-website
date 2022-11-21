@@ -10,6 +10,14 @@
     max-width: clamp(40vw, 50rem, 90vw);
     margin: 0 auto;
 
-    @include max-query(40rem) {
+    a {
+        color: $color-a;
+        text-decoration: underline;
+        transition: all 150ms;
+
+        &:hover {
+            text-shadow: 0 0.25rem 0.5rem $color-a;
+            cursor: pointer;
+        }
     }
 }
