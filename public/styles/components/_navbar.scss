@@ -1,11 +1,19 @@
 @use "../base/_base-h" as *;
 @use "../utils/_utils" as *;
+@use "../animations/_animations" as *;
 
 #main-navbar {
     display: flex;
     justify-content: right;
-    background-color: $color-a;
+    background-color: $color-p-dark;
     width: 100%;
+    top: unset;
+    bottom: 0;
+    transition: all 200ms;
+    position: sticky;
+
+    opacity: 0;
+    animation: reveal 1s linear 1.75s forwards;
 
     .dropdown {
         display: flex;
@@ -16,19 +24,19 @@
 
         &:hover {
             cursor: pointer;
-            background-color: $color-p-dark;
+            background-color: $color-a;
 
             span {
-                color: $color-white;
+                color: $color-p-dark;
             }
 
             .arrow {
-                border-top-color: $color-white;
+                border-top-color: $color-p-dark;
             }
         }
 
         span {
-            color: $color-p-dark;
+            color: $color-a;
             text-decoration: none;
             font-family: "Montserrat", sans-serif;
             font-weight: 300;
@@ -40,13 +48,33 @@
             width: 1rem;
             border: 0.5rem solid transparent;
             border-bottom-width: 0;
-            border-top-color: $color-p-dark;
+            border-top-color: $color-a;
             transition: 250ms;
         }
 
         &.active {
             .arrow {
                 transform: rotateX(180deg);
+            }
+        }
+    }
+
+    &.top {
+        top: 0;
+        bottom: unset;
+
+        background-color: $color-a;
+
+        .dropdown {
+            span {
+                color: $color-p-dark;
+            }
+
+            &:hover {
+                background-color: $color-p-dark;
+                span {
+                    color: $color-a;
+                }
             }
         }
     }

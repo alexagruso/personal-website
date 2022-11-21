@@ -6,7 +6,6 @@
 @use "./utils/_utils" as *;
 
 @use "./components/_components";
-@use "./layouts/_layouts";
 
 @use "./animations/_animations";
 
@@ -15,5 +14,4 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
 }
