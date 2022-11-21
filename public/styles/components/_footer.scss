@@ -7,7 +7,7 @@
     border-top: 1px solid $color-a;
     margin-top: 10vh;
 
-    @include max-query(20rem) {
+    @include max-query(40rem) {
         flex-direction: column;
     }
 
@@ -30,6 +30,10 @@
         &::selection {
             text-decoration: none;
         }
+
+        @include max-query(40rem) {
+            display: none;
+        }
     }
 
     .copyright {
@@ -37,6 +41,10 @@
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
+
+        @include max-query(40rem) {
+            gap: 0.75rem;
+        }
     }
 
     .contact {
@@ -44,6 +52,11 @@
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
+
+        @include max-query(40rem) {
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
     }
 
     .icons {
