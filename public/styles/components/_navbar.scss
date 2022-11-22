@@ -1,11 +1,8 @@
-@use "../base/_base-h" as *;
 @use "../utils/_utils" as *;
-@use "../animations/_animations" as *;
 
 #main-navbar {
     display: flex;
     justify-content: right;
-    background-color: $color-p-dark;
     width: 100%;
     top: unset;
     bottom: 0;
@@ -13,7 +10,7 @@
     position: sticky;
 
     opacity: 0;
-    animation: reveal 1s linear 1.75s forwards;
+    animation: navbar 1s ease-out 1.5s forwards;
 
     .dropdown {
         display: flex;
@@ -21,6 +18,7 @@
         align-items: center;
         padding: 1.5rem;
         transition: 250ms;
+        text-decoration: none;
 
         &:hover {
             cursor: pointer;
@@ -71,7 +69,7 @@
             }
 
             &:hover {
-                background-color: $color-p-dark;
+                background-color: $color-p;
                 span {
                     color: $color-a;
                 }

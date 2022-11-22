@@ -1,4 +1,3 @@
-@use "../animations/_animations" as *;
 @use "../utils/_utils" as *;
 
 .title {
@@ -7,19 +6,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 
     &::before {
         content: "";
         position: absolute;
-        width: 25rem;
-        height: 25rem;
+        width: 30rem;
+        height: 30rem;
         background-image: url("icosahedron.png");
         background-repeat: no-repeat;
         background-size: 100%;
-        filter: invert(30%);
+        filter: invert(20%);
 
         opacity: 0;
-        animation: reveal 1s linear 1.75s forwards, spin 10s linear 1.75s infinite;
+        animation: backgroundReveal 1s linear 1.5s forwards,
+            backgroundRotate 10s linear 1.5s infinite;
     }
 
     h1 {
@@ -32,7 +33,7 @@
         color: $color-a;
 
         opacity: 0;
-        animation: reveal 1s ease-out forwards;
+        animation: title 1s ease-out 0.25s forwards;
     }
 
     span {
@@ -44,6 +45,6 @@
         color: $color-a;
 
         opacity: 0;
-        animation: reveal 0.75s ease-out 0.75s forwards, italicize 0.25s ease-in 1.25s forwards;
+        animation: subtitle 0.75s ease-out 0.75s forwards;
     }
 }

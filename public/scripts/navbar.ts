@@ -1,11 +1,11 @@
 const navbar: HTMLElement = document.querySelector("#main-navbar")!;
 
-const navbarY: number = navbar.getBoundingClientRect().y;
+const cutoff: number = window.innerHeight;
 
 window.onscroll = () => {
-    if (window.scrollY > navbarY) {
+    if (window.scrollY > cutoff) {
         navbar.classList.add("top");
-    } else if (window.scrollY < navbarY) {
+    } else {
         navbar.classList.remove("top");
     }
-}
+};

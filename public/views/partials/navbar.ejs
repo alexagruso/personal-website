@@ -1,15 +1,22 @@
 <nav id="main-navbar">
-    <% for (let link of ["About Me", "Portfolio", "Contact"]) { %>
     <section>
-        <a class="dropdown">
-            <span><%= link %></span>
-            <% if (link === "About Me") { %>
-            <div class="arrow">
-                <div></div>
-                <div></div>
-            </div>
-            <% } %>
+        <a href="/" class="dropdown">
+            <span>Home</span>
         </a>
     </section>
-    <% } %>
+    <section>
+        <a href="/about" class="dropdown">
+            <span>About Me</span>
+        </a>
+    </section>
+    <section>
+        <a href="/portfolio" class="dropdown">
+            <span>Portfolio</span>
+        </a>
+    </section>
+    <section>
+        <a href="/contact" class="dropdown">
+            <span>Contact</span>
+        </a>
+    </section>
 </nav>

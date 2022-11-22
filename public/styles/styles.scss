@@ -1,17 +1,16 @@
 @charset "utf-8";
 
 // css reset and typography imports
-@use "./base/__base-h" as *;
+@use "./base/_base" as *;
 
 @use "./utils/_utils" as *;
 
 @use "./components/_components";
-
-@use "./animations/_animations";
 
 body {
     background-color: $color-p-dark;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }

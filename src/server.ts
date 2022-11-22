@@ -18,6 +18,22 @@ server.get("/", (req: Request, res: Response) => {
     res.status(200).render("home", { title: pageTitle });
 });
 
+server.get("/about", (req: Request, res: Response) => {
+    res.status(200).render("about", { title: pageTitle });
+});
+
+server.get("/portfolio", (req: Request, res: Response) => {
+    res.status(200).render("portfolio", { title: pageTitle });
+});
+
+server.get("/contact", (req: Request, res: Response) => {
+    res.status(200).render("contact", { title: pageTitle });
+});
+
+server.get("*", (req: Request, res: Response) => {
+    res.status(200).render("404", { title: pageTitle });
+});
+
 const port: number = parseInt(process.env.PORT!) || 8080;
 
 server.listen(port, () => {
