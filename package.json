@@ -1,39 +1,36 @@
 {
-    "name": "gulp",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "dev": "gulp dev",
-        "build": "gulp build:sass && gulp build:browserScripts && tsc -p .",
-        "start": "node -r ts-node/register -r tsconfig-paths/register ./dist/server.js",
-        "clean": "rm -rf ./dist/"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "@types/express": "^4.17.14",
-        "@types/express-ejs-layouts": "^2.5.0",
-        "@types/node": "^18.11.9",
-        "browserify": "^17.0.0",
-        "gulp": "^4.0.2",
-        "gulp-concat": "^2.6.1",
-        "gulp-nodemon": "^2.5.0",
-        "gulp-sass": "^5.1.0",
-        "gulp-typescript": "6.0.0-alpha.1",
-        "gulp-uglify": "^3.0.2",
-        "nodemon": "^2.0.20",
-        "sass": "^1.56.0",
-        "ts-node": "^10.9.1",
-        "tsconfig-paths": "^4.1.0",
-        "typescript": "^4.8.4",
-        "vinyl-buffer": "^1.0.1",
-        "vinyl-source-stream": "^2.0.0"
-    },
-    "dependencies": {
-        "ejs": "^3.1.8",
-        "express": "^4.18.2",
-        "express-ejs-layouts": "^2.5.1"
-    }
+	"name": "personal-website",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test": "npm run test:integration && npm run test:unit",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write .",
+		"test:integration": "playwright test",
+		"test:unit": "vitest"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.28.1",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.20.4",
+		"@typescript-eslint/eslint-plugin": "^5.45.0",
+		"@typescript-eslint/parser": "^5.45.0",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte": "^2.30.0",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.10.1",
+		"svelte": "^4.0.5",
+		"svelte-check": "^3.4.3",
+		"tslib": "^2.4.1",
+		"typescript": "^5.0.0",
+		"vite": "^4.4.2",
+		"vitest": "^0.32.2"
+	},
+	"type": "module"
 }
