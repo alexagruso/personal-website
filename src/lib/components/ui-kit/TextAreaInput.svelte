@@ -5,9 +5,10 @@
     export let value: string;
 </script>
 
-<label for="{name}-text" class="col">
+<label for="{name}-textarea" class="col">
     <span>{label}</span>
-    <input type="text" {name} id="{name}-text" {placeholder} bind:value />
+    <!-- <input type="text" {name} id="{name}-input" {placeholder} bind:value /> -->
+    <textarea {name} id="{name}-textarea" {placeholder} bind:value />
 </label>
 
 <style lang="scss">
@@ -15,6 +16,7 @@
 
     label {
         gap: 1rem;
+        flex-grow: 1;
     }
 
     label > span {
@@ -23,11 +25,14 @@
         text-transform: uppercase;
     }
 
-    input {
+    textarea {
+        resize: vertical;
+
         transition: border-color $hover-transition-duration;
 
         border-bottom: 2px solid lighten(grey, 10%);
         padding-bottom: 0.25rem;
+        height: 100%;
 
         font-size: 1rem;
         font-weight: 100;
@@ -42,7 +47,7 @@
         }
     }
 
-    input::placeholder {
+    textarea::placeholder {
         transition: color $hover-transition-duration;
 
         font-size: 1rem;

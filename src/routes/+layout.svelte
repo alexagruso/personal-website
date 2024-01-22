@@ -30,6 +30,7 @@
     }
 
     main {
+        align-items: center;
         gap: 1rem;
         flex-grow: 1;
     }
