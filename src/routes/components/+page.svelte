@@ -1,18 +1,24 @@
 <script lang="ts">
     import CheckboxInput from "@lib/components/ui-kit/CheckboxInput.svelte";
+    import RadioInput from "@lib/components/ui-kit/RadioInput.svelte";
     import TextAreaInput from "@lib/components/ui-kit/TextAreaInput.svelte";
     import TextInput from "@lib/components/ui-kit/TextInput.svelte";
 
     let text: string;
     let textarea: string;
-    let checked: boolean;
+    let checkbox: boolean;
+    let radio: boolean;
 </script>
 
 <div class="container row">
     <div class="card col">
-        <TextInput name="text" bind:value={text} />
-        <TextAreaInput name="textarea" bind:value={textarea} />
-        <CheckboxInput name="checkbox" bind:checked />
+        <TextInput name="text" label="text" placeholder="text placeholder" bind:value={text} />
+        <TextAreaInput name="textarea" label="textarea" placeholder="textarea placeholder" bind:value={textarea} />
+        <CheckboxInput name="checkbox" label="checkbox" bind:checked={checkbox} />
+        <RadioInput name="radio" label="one" bind:group={radio} />
+        <RadioInput name="radio" label="two" bind:group={radio} />
+        <RadioInput name="radio" label="three" bind:group={radio} />
+        <RadioInput name="radio" label="four" bind:group={radio} />
     </div>
 </div>
 

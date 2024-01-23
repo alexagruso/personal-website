@@ -1,12 +1,12 @@
 <script lang="ts">
     export let label = "Label";
     export let name: string;
-    export let checked: boolean;
+    export let group: boolean;
 </script>
 
 <label for="{name}-checkbox" class="row">
     <div class="checkbox-button row">
-        <input type="checkbox" {name} id="{name}-checkbox" bind:checked />
+        <input type="radio" {name} id="{name}-checkbox" bind:group />
         <div class="check-animation" />
     </div>
     <span>{label}</span>
@@ -37,7 +37,7 @@
         appearance: none;
 
         border: 2px solid black;
-        border-radius: 0.25rem;
+        border-radius: 50%;
         width: 1rem;
         height: 1rem;
     }
