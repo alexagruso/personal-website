@@ -36,6 +36,8 @@
     input {
         appearance: none;
 
+        transition: background-color $hover-transition-duration;
+
         border: 2px solid black;
         border-radius: 0.25rem;
         width: 1rem;
@@ -44,6 +46,11 @@
 
     input:checked ~ .check-animation {
         scale: 0.6;
+    }
+
+    input:hover,
+    input:focus {
+        background-color: darken(white, 15%);
     }
 
     .checkbox-button {

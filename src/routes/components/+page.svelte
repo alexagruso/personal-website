@@ -30,7 +30,7 @@
 
         margin: 2rem;
         box-shadow: 0 0 0.1rem black;
-        padding: 1rem;
+        padding: 2rem;
         max-width: 48rem;
         width: 100%;
     }
