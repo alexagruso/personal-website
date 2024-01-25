@@ -43,7 +43,7 @@
     }
 
     input:checked ~ .check-animation {
-        scale: 1;
+        scale: 0.6;
     }
 
     .checkbox-button {

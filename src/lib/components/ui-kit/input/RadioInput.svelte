@@ -1,13 +1,13 @@
 <script lang="ts">
     export let label = "Label";
     export let name: string;
-    export let group: boolean;
+    export let id: string;
 </script>
 
-<label for="{name}-checkbox" class="row">
-    <div class="checkbox-button row">
-        <input type="radio" {name} id="{name}-checkbox" bind:group />
-        <div class="check-animation" />
+<label for={id} class="row">
+    <div class="radio-button row">
+        <input type="radio" {name} {id} />
+        <div class="click-animation" />
     </div>
     <span>{label}</span>
 </label>
@@ -42,11 +42,11 @@
         height: 1rem;
     }
 
-    input:checked ~ .check-animation {
-        scale: 1;
+    input:checked ~ .click-animation {
+        scale: 0.5;
     }
 
-    .checkbox-button {
+    .radio-button {
         position: relative;
 
         align-items: center;
@@ -56,7 +56,7 @@
         height: 100%;
     }
 
-    .check-animation {
+    .click-animation {
         position: absolute;
 
         transition: scale 150ms;
